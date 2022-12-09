@@ -51,7 +51,7 @@ namespace WebUI.Controllers
 			cat.CategoryStatus = category.CategoryStatus;
 			cat.CategoryDescription = category.CategoryDescription;
 			c.SaveChanges();
-			return RedirectToAction("Index");
+			return RedirectToAction("EditCategory");
 		}
 
 	}
