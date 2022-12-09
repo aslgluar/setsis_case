@@ -1,0 +1,24 @@
+﻿@using setsis_EL.Concrete
+@model List<Category>
+@{
+	Layout = null;
+}
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>ID</th>
+		<th>ID</th>
+		<th>ID</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.CategoryID</td>
+			<td>@item.CategoryStatus</td>
+			<td>@item.CategoryName</td>
+			<td>@item.CategoryDescription</td>
+
+		</tr>
+	}
+</table>

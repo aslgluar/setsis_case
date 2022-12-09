@@ -1,0 +1,28 @@
+﻿@using setsis_EL.Concrete
+@model Category
+@{
+    ViewData["Title"] = "EditCategory";
+}
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.Label("Kategori adı")
+        @Html.TextAreaFor(x => x.CategoryName)
+        @Html.ValidationMessageFor(x=>x.CategoryName)
+
+        <br />
+        @Html.Label("açıklama yazınız")
+        @Html.TextBoxFor(x => x.CategoryDescription)
+        @Html.ValidationMessageFor(x=>x.CategoryDescription)
+        <br />
+        @Html.Label("Durum Bilgisi  yazınız")
+        @Html.TextBoxFor(x => x.CategoryStatus)
+        @Html.ValidationMessageFor(x=>x.CategoryStatus)
+        <br />
+        <a href="/Category/Index" class=" btn btn-primary">Güncelle</a>
+
+    </div>
+}
+

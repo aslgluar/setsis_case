@@ -1,0 +1,32 @@
+﻿@using setsis_EL.Concrete
+@model List<Category>
+@{
+	ViewData["Title"] = "Index";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<table class="table table-hover">
+	<tr>
+		<th>ID</th>
+		<th>ADI</th>
+		<th>AÇIKLAMA</th>
+		<th>DURUM</th>
+		<th>Güncelle</th>
+	</tr>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>@item.CategoryID</td>
+			<td>@item.CategoryName</td>
+			<td>@item.CategoryDescription</td>
+			<td>@item.CategoryStatus</td>
+			<th><a href="/Category/EditCategory/@item.CategoryID" class="btn btn-success">Güncelle</a></th>
+			<th><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-danger">Sil</a></th>
+		</tr>
+	}
+
+</table>
+<a href="/Category/AddCategory" class="btn btn-info">Kategori Ekle</a>
+<button class="btn btn-warning">Kategori Listesi</button>
+

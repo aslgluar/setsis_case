@@ -1,0 +1,11 @@
+﻿@using setsis_EL.Concrete
+@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+@foreach (var item in Model)
+{
+    <th>@item.CategoryDescription</th>
+}
+<h1>Index</h1>
+

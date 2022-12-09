@@ -1,0 +1,32 @@
+﻿@using setsis_EL.Concrete
+@model Category
+@{
+    ViewData["Title"] = "AddCategory";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.Label("kategori adı")
+        @Html.TextBoxFor(x => x.CategoryName)
+        @Html.ValidationMessageFor(x=>x.CategoryName)
+
+        <br />
+        @Html.Label("açıklama yazınız")
+        @Html.TextAreaFor(x => x.CategoryDescription)
+        @Html.ValidationMessageFor(x=>x.CategoryDescription)
+        <br />
+        @Html.Label("Durum Bilgisi  yazınız")
+        @Html.TextAreaFor(x => x.CategoryStatus)
+        @Html.ValidationMessageFor(x=>x.CategoryStatus)
+        <br />
+        <a href="/Category/Index" class="btn btn-primary">kayıt</a>
+        <button class="btn btn-primary">Kaydet</button>
+
+
+    </div>
+}
